@@ -4,9 +4,9 @@ using System.Text;
 using TMPro;
 using UnityEngine;
 
-public class Console : MonoBehaviour
+public class CustomConsole : MonoBehaviour
 {
-    public static Console instance;
+    public static CustomConsole instance;
 
     public TextMeshProUGUI txt;
 
@@ -26,12 +26,12 @@ public class Console : MonoBehaviour
 
     public static void LogStaticText(int index, string msg)
     {
-        if (index >= instance.staticTexts.Length || index <= 0) throw new System.Exception("Indice fuera de rango");
+        if (index >= instance.staticTexts.Length || index < 0) throw new System.Exception("Indice fuera de rango");
         instance.staticTexts[index].text = msg;
     }
     public static void LogStaticText(int index, string msg, Color color, bool bold = false)
     {
-        if (index >= instance.staticTexts.Length || index <= 0) throw new System.Exception("Indice fuera de rango");
+        if (index >= instance.staticTexts.Length || index < 0) throw new System.Exception("Indice fuera de rango");
         instance.staticTexts[index].text = msg.Bold(bold).Paint(color);
     }
 
