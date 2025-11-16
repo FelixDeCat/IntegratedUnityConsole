@@ -14,14 +14,8 @@ public class CustomConsole : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
+        if (instance == null) instance = this;
+        else Destroy(this.gameObject);
     }
 
     public static void LogStaticText(int index, string msg)
