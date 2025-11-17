@@ -8,14 +8,29 @@ public class CustomConsole : MonoBehaviour
 {
     public static CustomConsole instance;
 
-    public TextMeshProUGUI txt;
+    [SerializeField] TextMeshProUGUI txt;
 
     [SerializeField] TextMeshProUGUI[] staticTexts;
+
+    CanvasGroupSwitcher switcher;
 
     private void Awake()
     {
         if (instance == null) instance = this;
         else Destroy(this.gameObject);
+    }
+
+    private void Start()
+    {
+        switcher = GetComponent<CanvasGroupSwitcher>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.L))
+        {
+            switcher.Switch();
+        }
     }
 
     public static void LogStaticText(int index, string msg)
