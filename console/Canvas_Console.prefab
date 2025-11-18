@@ -49,7 +49,6 @@ GameObject:
   - component: {fileID: 4634062545511639582}
   - component: {fileID: 9212977177007026957}
   - component: {fileID: 7369507324238266305}
-  - component: {fileID: 2400590932516517335}
   m_Layer: 5
   m_Name: Canvas_Console
   m_TagString: Untagged
@@ -159,20 +158,6 @@ MonoBehaviour:
   - {fileID: 3065579969963055927}
   - {fileID: 1977038564705648092}
   - {fileID: 876583892123689242}
---- !u!114 &2400590932516517335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114558856347462212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5b14acfce46a0e459622de930e2c8fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CanvasGroupSwitcher
-  group: {fileID: 6698779762527994984}
-  time: 0.3
 --- !u!1 &570468218512805703
 GameObject:
   m_ObjectHideFlags: 0

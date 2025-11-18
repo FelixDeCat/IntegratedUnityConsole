@@ -20,19 +20,6 @@ public class CustomConsole : MonoBehaviour
         else Destroy(this.gameObject);
     }
 
-    private void Start()
-    {
-        switcher = GetComponent<CanvasGroupSwitcher>();
-    }
-
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.L))
-        {
-            switcher.Switch();
-        }
-    }
-
     public static void LogStaticText(int index, string msg)
     {
         if (index >= instance.staticTexts.Length || index < 0) LogError($"Intentando debugear un static text, pero el indice fuera de rango INDEX: {index.ToString().Bold(true).Paint(Color.yellow)}");
